@@ -8,45 +8,40 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Is QuizMaster safe for kids?",
+      question: "Is PAQuiz safe for kids?",
       answer:
-        "QuizMaster is designed with child safety as our top priority. We have strict moderation, no chat features with strangers, and all content is age-appropriate and educational.",
+        "PAQuiz is designed with child safety as our top priority. We have strict moderation, no chat features with strangers, and all content is age-appropriate and educational.",
     },
     {
-      question: "What age group is QuizMaster designed for?",
+      question: "What age group is PAQuiz designed for?",
       answer:
-        "QuizMaster is perfect for kids aged 6-16. We have different difficulty levels and categories that adapt to different age groups, ensuring everyone can enjoy learning at their own pace.",
+        "PAQuiz is perfect for kids aged 6-16. We have different difficulty levels and categories that adapt to different age groups, ensuring everyone can enjoy learning at their own pace.",
     },
     {
-      question: "How do kids get started with QuizMaster?",
+      question: "How do kids get started with PAQuiz?",
       answer:
-        "Getting started is super easy! Kids can click 'Start Quiz' and parents can help create a safe account. No personal information is required from children, and parents maintain full control over the account.",
-    },
-    {
-      question: "Can parents track their child's progress?",
-      answer:
-        "Yes! Parents have access to detailed progress reports showing their child's learning journey, strengths, areas for improvement, and time spent learning. It's a great way to celebrate achievements together!",
+        "Getting started is super easy! Kids can click 'Start Learning' and parents can help create a safe account. No personal information is required from children, and parents maintain full control over the account.",
     },
     {
       question: "What subjects and topics are covered?",
       answer:
-        "We cover a wide range of kid-friendly topics including Science, Math, History, Geography, Animals, Space, Sports, and Fun Facts. All questions are carefully reviewed by educators to ensure they're appropriate and engaging.",
+        "We cover a wide range of kid-friendly topics focused on values like kindness, safety, honesty, and social awareness. Each quiz is thoughtfully crafted and reviewed by educators to ensure it's age-appropriate, meaningful, and fun to explore.",
     },
     {
-      question: "Is there a cost to use QuizMaster?",
+      question: "Is there a cost to use PAQuiz?",
       answer:
-        "QuizMaster offers a generous free plan that includes access to many quizzes and basic features. We also have a family-friendly premium plan with additional content, detailed analytics, and special features.",
+        "PAQuiz offers a generous free plan that includes access to many quizzes and basic features.",
     },
     {
       question: "Can kids play with their friends?",
       answer:
-        "Yes! Kids can create private quiz rooms and invite their friends to join. All multiplayer features are designed to be safe, fun, and educational, with no direct communication between players.",
+        "Coming soon.",
     },
     {
-      question: "How do you ensure the content is educational?",
+      question: "Can parents track their child's progress?",
       answer:
-        "All our content is created and reviewed by certified educators and child development experts. We focus on making learning fun while ensuring every question contributes to a child's educational growth.",
-    },
+        "Coming soon.",
+    }
   ]
 
   return (
@@ -69,7 +64,7 @@ export default function FAQ() {
             <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent"> Questions?</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Find answers to the most common questions about QuizMaster. Parents and kids can learn everything they need
+            Find answers to the most common questions about PAQuiz. Parents and kids can learn everything they need
             to know to get started!
           </p>
         </div>
@@ -115,7 +110,7 @@ export default function FAQ() {
             <Sparkles className="h-8 w-8 text-yellow-500 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Still have questions?</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Our friendly support team is here to help parents and kids get the most out of QuizMaster.
+              Our friendly support team is here to help parents and kids get the most out of PAQuiz.
             </p>
             <button className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-400 hover:to-red-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-500/25">
               Contact Support
