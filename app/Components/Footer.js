@@ -66,12 +66,12 @@ export default function Footer() {
                   <Sparkles className="h-4 w-4 text-yellow-500 absolute -top-1 -right-1 animate-pulse" />
                 </div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
-                  QuizMaster
+                  PAQuiz
                 </span>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-md leading-relaxed">
-                Making learning fun, safe, and engaging for kids worldwide. Join thousands of families who trust
-                QuizMaster for their children's educational journey!
+                Making understanding and learning safe for kids worldwide. Join thousands of families who trust
+                PAQuiz for their children's safety journey!
               </p>
 
               {/* Social Links */}
@@ -149,7 +149,7 @@ export default function Footer() {
           <div className="border-t border-red-200/50 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-center md:text-left mb-4 md:mb-0">
-                <p className="text-gray-600 dark:text-gray-300">© {currentYear} QuizMaster. All rights reserved.</p>
+                <p className="text-gray-600 dark:text-gray-300">© {currentYear} PAQuiz. All rights reserved.</p>
                 <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
                   Made with ❤️ for kids and families worldwide
                 </p>
