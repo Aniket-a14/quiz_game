@@ -5,22 +5,25 @@ import { Moon, Sun } from "lucide-react"
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
+    setMounted(true)
     const savedTheme = localStorage.getItem("theme")
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
 
     if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
       setIsDark(true)
       document.documentElement.classList.add("dark")
+    } else {
+      setIsDark(false)
+      document.documentElement.classList.remove("dark")
     }
   }, [])
 
   const toggleTheme = () => {
     const newTheme = !isDark
     setIsDark(newTheme)
-
     if (newTheme) {
       document.documentElement.classList.add("dark")
       localStorage.setItem("theme", "dark")
@@ -29,6 +32,9 @@ export default function ThemeToggle() {
       localStorage.setItem("theme", "light")
     }
   }
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) return null
 
   return (
     <button
@@ -44,8 +50,6 @@ export default function ThemeToggle() {
           className={`absolute inset-0 h-6 w-6 text-blue-400 transition-all duration-500 ${isDark ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"}`}
         />
       </div>
-
-      {/* Tooltip */}
       <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-gray-800 dark:bg-white text-white dark:text-gray-800 text-xs px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
         {isDark ? "Light mode" : "Dark mode"}
       </div>

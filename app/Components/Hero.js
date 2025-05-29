@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Play, Trophy, Users, Clock, Star, Zap, Target } from "lucide-react"
 import Image from "next/image"
 
@@ -83,7 +84,7 @@ export default function Hero() {
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
             style={{ animation: "fadeInUp 1s ease-out 0.6s both" }}
           >
-           Because teaching kids the difference between good and bad isn't just education it's
+            Because teaching kids the difference between good and bad isn't just education it's
             <span className="text-red-600 font-semibold">  protection, empowerment, </span>
             and preparation for life!
           </p>
@@ -131,13 +132,15 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-400 hover:to-red-600 text-white text-lg px-8 py-4 shadow-xl hover:shadow-red-500/25 transition-all duration-300 hover:scale-105 border-0"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Start Learning Now
-              </Button>
+              <Link href="Components/quiz-game">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-400 hover:to-red-600 text-white text-lg px-8 py-4 shadow-xl hover:shadow-red-500/25 transition-all duration-300 hover:scale-105 border-0"
+                >
+                  <Play className="mr-2 h-5 w-5" />
+                  Start Learning Now
+                </Button>
+              </Link>
             </div>
           </div>
 

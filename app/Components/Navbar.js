@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Menu, X, Brain, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ThemeToggle from "./Theme-toggle"
+import Link from "next/link"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -65,10 +66,12 @@ export default function Navbar() {
 
           {/* Desktop CTA Button */}
           <div className="hidden md:block">
+            <Link href="Components/quiz-game">
             <Button className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-400 hover:to-red-600 text-white border-0 shadow-lg hover:shadow-red-500/25 transition-all duration-300 hover:scale-105">
               <Sparkles className="mr-2 h-4 w-4" />
               Start Learning
             </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
