@@ -23,19 +23,20 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
           ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-red-200/50 dark:border-red-400/30 shadow-lg"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3 group">
             <div className="relative">
-              <Brain className="h-10 w-10 text-red-600 group-hover:text-red-500 transition-all duration-300 group-hover:scale-110" />
-              <Sparkles className="h-4 w-4 text-yellow-500 absolute -top-1 -right-1 animate-pulse" />
+              <a href="#home">
+                <Brain className="h-10 w-10 text-red-600 group-hover:text-red-500 transition-all duration-300 group-hover:scale-110" />
+                <Sparkles className="h-4 w-4 text-yellow-500 absolute -top-1 -right-1 animate-pulse" />
+              </a>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
               PAQuiz

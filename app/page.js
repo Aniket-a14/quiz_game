@@ -15,8 +15,8 @@ export default function QuizGameApp() {
         <Hero />
         <About />
         <FAQ />
-        <Contact />
         <Team />
+        <Contact />
       </main>
       <Footer />
     </div>

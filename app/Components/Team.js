@@ -46,7 +46,7 @@ export default function Team() {
             <span className="bg-gradient-to-r from-gray-800 dark:from-gray-100 to-gray-600 dark:to-gray-300 bg-clip-text text-transparent">
               The Caring Team Behind
             </span>
-            <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">PAQuiz</span> 
+            <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent"> PAQuiz</span> 
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We're a passionate group of developers working together to create the safest and most engaging learning experience for kids.
