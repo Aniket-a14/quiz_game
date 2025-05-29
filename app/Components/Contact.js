@@ -37,7 +37,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+91 123456789",
       description: "Mon-Fri from 8am to 5pm",
     },
     {
@@ -57,22 +57,24 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-rose-50 to-white"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-rose-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-red-100/20 via-transparent to-transparent"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-red-200/50 mb-8 shadow-lg">
-            <MessageCircle className="h-4 w-4 text-red-600 mr-2" />
-            <span className="text-red-700 text-sm font-medium">Get in Touch</span>
+          <div className="inline-flex items-center px-4 py-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-full border border-red-200/50 dark:border-red-400/30 mb-8 shadow-lg">
+            <MessageCircle className="h-4 w-4 text-red-600 dark:text-red-400 mr-2" />
+            <span className="text-red-700 dark:text-red-300 text-sm font-medium">Get in Touch</span>
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">Let's</span>
+            <span className="bg-gradient-to-r from-gray-800 dark:from-gray-100 to-gray-600 dark:to-gray-300 bg-clip-text text-transparent">
+              Let's
+            </span>
             <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent"> Connect</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Have questions about QuizMaster? Want to share feedback? We'd love to hear from parents and kids! Our team
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Have questions about PAQuiz? Want to share feedback? We'd love to hear from parents and kids! Our team
             is here to help make learning fun and safe.
           </p>
         </div>
@@ -81,7 +83,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-3xl font-bold text-gray-800 mb-8">Contact Information</h3>
+              <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-8">Contact Information</h3>
               <div className="grid gap-6">
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon
@@ -91,7 +93,7 @@ export default function Contact() {
                       className="group"
                       style={{ animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both` }}
                     >
-                      <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-6 border border-red-200/50 hover:border-red-300/50 transition-all duration-300 hover:bg-white/80 shadow-lg hover:shadow-xl">
+                      <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-2xl p-6 border border-red-200/50 dark:border-red-400/30 hover:border-red-300/50 dark:hover:border-red-400/50 transition-all duration-300 hover:bg-white/80 dark:hover:bg-gray-800/80 shadow-lg hover:shadow-xl">
                         <div className="flex items-start space-x-4">
                           <div className="flex-shrink-0">
                             <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -99,9 +101,9 @@ export default function Contact() {
                             </div>
                           </div>
                           <div className="min-w-0 flex-1">
-                            <p className="text-lg font-semibold text-gray-800 mb-1">{info.title}</p>
-                            <p className="text-red-600 font-medium mb-1 break-words">{info.value}</p>
-                            <p className="text-gray-500 text-sm">{info.description}</p>
+                            <p className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-1">{info.title}</p>
+                            <p className="text-red-600 dark:text-red-400 font-medium mb-1 break-words">{info.value}</p>
+                            <p className="text-gray-500 dark:text-gray-400 text-sm">{info.description}</p>
                           </div>
                         </div>
                       </div>
@@ -112,10 +114,10 @@ export default function Contact() {
             </div>
 
             {/* Additional Info */}
-            <div className="bg-gradient-to-r from-red-100/80 via-white/80 to-red-100/80 rounded-2xl p-8 backdrop-blur-xl border border-red-200/50 shadow-lg">
-              <Shield className="h-8 w-8 text-red-600 mb-4" />
-              <h4 className="text-xl font-semibold text-gray-800 mb-4">Safe & Secure Support</h4>
-              <p className="text-gray-600 mb-6">
+            <div className="bg-gradient-to-r from-red-100/80 via-white/80 to-red-100/80 dark:from-gray-800/80 dark:via-gray-700/80 dark:to-gray-800/80 rounded-2xl p-8 backdrop-blur-xl border border-red-200/50 dark:border-red-400/30 shadow-lg">
+              <Shield className="h-8 w-8 text-red-600 dark:text-red-400 mb-4" />
+              <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">Safe & Secure Support</h4>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Our support team is trained in child safety and privacy. We're committed to providing a secure
                 environment for kids to learn and grow while giving parents peace of mind.
               </p>
@@ -123,7 +125,7 @@ export default function Contact() {
                 {["Child-Safe", "COPPA Compliant", "Parent Controlled"].map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-white/60 rounded-full text-sm text-red-700 border border-red-200/50"
+                    className="px-3 py-1 bg-white/60 dark:bg-gray-700/60 rounded-full text-sm text-red-700 dark:text-red-300 border border-red-200/50 dark:border-red-400/30"
                   >
                     {tag}
                   </span>
@@ -134,13 +136,13 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div
-            className="bg-white/60 backdrop-blur-xl rounded-3xl p-8 border border-red-200/50 shadow-2xl"
+            className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl rounded-3xl p-8 border border-red-200/50 dark:border-red-400/30 shadow-2xl"
             style={{ animation: "fadeInUp 0.6s ease-out 0.3s both" }}
           >
-            <h3 className="text-3xl font-bold text-gray-800 mb-8">Send us a Message</h3>
+            <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-8">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-3">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-3">
                   Full Name *
                 </label>
                 <Input
@@ -151,11 +153,11 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Enter your full name"
-                  className="w-full bg-white/80 border-red-200/50 text-gray-800 placeholder:text-gray-500 focus:border-red-400 focus:ring-red-400/20 rounded-xl"
+                  className="w-full bg-white/80 dark:bg-gray-700/80 border-red-200/50 dark:border-red-400/30 text-gray-800 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-red-400 dark:focus:border-red-400 focus:ring-red-400/20 rounded-xl"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-3">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-3">
                   Email Address *
                 </label>
                 <Input
@@ -166,11 +168,11 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="your.email@example.com"
-                  className="w-full bg-white/80 border-red-200/50 text-gray-800 placeholder:text-gray-500 focus:border-red-400 focus:ring-red-400/20 rounded-xl"
+                  className="w-full bg-white/80 dark:bg-gray-700/80 border-red-200/50 dark:border-red-400/30 text-gray-800 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-red-400 dark:focus:border-red-400 focus:ring-red-400/20 rounded-xl"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-3">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-3">
                   Message *
                 </label>
                 <Textarea
@@ -181,7 +183,7 @@ export default function Contact() {
                   required
                   placeholder="Tell us how we can help you..."
                   rows={6}
-                  className="w-full bg-white/80 border-red-200/50 text-gray-800 placeholder:text-gray-500 focus:border-red-400 focus:ring-red-400/20 rounded-xl resize-none"
+                  className="w-full bg-white/80 dark:bg-gray-700/80 border-red-200/50 dark:border-red-400/30 text-gray-800 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-red-400 dark:focus:border-red-400 focus:ring-red-400/20 rounded-xl resize-none"
                 />
               </div>
               <Button

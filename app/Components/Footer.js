@@ -51,7 +51,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-100 via-white to-rose-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-100 via-white to-rose-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-100/30 via-transparent to-transparent"></div>
 
       <div className="relative z-10">
@@ -69,7 +69,7 @@ export default function Footer() {
                   QuizMaster
                 </span>
               </div>
-              <p className="text-gray-600 mb-6 max-w-md leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-md leading-relaxed">
                 Making learning fun, safe, and engaging for kids worldwide. Join thousands of families who trust
                 QuizMaster for their children's educational journey!
               </p>
@@ -101,13 +101,13 @@ export default function Footer() {
             {/* Links Sections */}
             {Object.entries(footerLinks).map(([category, links]) => (
               <div key={category}>
-                <h3 className="text-lg font-semibold text-gray-800 mb-6 capitalize">{category}</h3>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-6 capitalize">{category}</h3>
                 <ul className="space-y-3">
                   {links.map((link) => (
                     <li key={link.name}>
                       <a
                         href={link.href}
-                        className="text-gray-600 hover:text-red-600 transition-colors duration-300 hover:translate-x-1 inline-block"
+                        className="text-gray-600 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors duration-300 hover:translate-x-1 inline-block"
                       >
                         {link.name}
                       </a>
@@ -120,14 +120,14 @@ export default function Footer() {
 
           {/* Newsletter Signup */}
           <div className="border-t border-red-200/50 mt-16 pt-12">
-            <div className="bg-gradient-to-r from-red-100/80 via-white/80 to-red-100/80 rounded-3xl p-8 backdrop-blur-xl border border-red-200/50 shadow-lg">
+            <div className="bg-gradient-to-r from-red-100/80 via-white/80 to-red-100/80 dark:from-gray-800/80 dark:via-gray-700/80 dark:to-gray-800/80 rounded-3xl p-8 backdrop-blur-xl border border-red-200/50 dark:border-red-400/30 shadow-lg">
               <div className="flex flex-col lg:flex-row justify-between items-center">
                 <div className="mb-6 lg:mb-0 text-center lg:text-left">
-                  <h4 className="text-2xl font-bold text-gray-800 mb-2 flex items-center justify-center lg:justify-start">
-                    <Mail className="h-6 w-6 mr-2 text-red-600" />
+                  <h4 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2 flex items-center justify-center lg:justify-start">
+                    <Mail className="h-6 w-6 mr-2 text-red-600 dark:text-red-400" />
                     Parent Newsletter
                   </h4>
-                  <p className="text-gray-600 max-w-md">
+                  <p className="text-gray-600 dark:text-gray-300 max-w-md">
                     Get updates on new features, educational tips, and child safety information delivered to your inbox.
                   </p>
                 </div>
@@ -135,7 +135,7 @@ export default function Footer() {
                   <input
                     type="email"
                     placeholder="Enter your email address"
-                    className="bg-white/80 text-gray-800 px-6 py-4 rounded-l-xl border border-red-200/50 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/20 flex-1 lg:w-80 placeholder:text-gray-500"
+                    className="bg-white/80 dark:bg-gray-700/80 text-gray-800 dark:text-gray-100 px-6 py-4 rounded-l-xl border border-red-200/50 dark:border-red-400/30 focus:outline-none focus:border-red-400 dark:focus:border-red-400 focus:ring-2 focus:ring-red-400/20 flex-1 lg:w-80 placeholder:text-gray-500 dark:placeholder:text-gray-400"
                   />
                   <button className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-400 hover:to-red-600 px-8 py-4 rounded-r-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-500/25 text-white font-medium">
                     Subscribe
@@ -149,19 +149,21 @@ export default function Footer() {
           <div className="border-t border-red-200/50 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-center md:text-left mb-4 md:mb-0">
-                <p className="text-gray-600">© {currentYear} QuizMaster. All rights reserved.</p>
-                <p className="text-gray-500 text-sm mt-1">Made with ❤️ for kids and families worldwide</p>
+                <p className="text-gray-600 dark:text-gray-300">© {currentYear} QuizMaster. All rights reserved.</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
+                  Made with ❤️ for kids and families worldwide
+                </p>
               </div>
 
               <div className="flex items-center space-x-6">
-                <div className="flex items-center text-sm text-gray-500">
+                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
                   Safe & Secure
                 </div>
 
                 <button
                   onClick={scrollToTop}
-                  className="bg-white/80 hover:bg-white border border-red-200/50 hover:border-red-300 text-red-600 p-3 rounded-xl transition-all duration-300 hover:scale-110 shadow-lg"
+                  className="bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-700 border border-red-200/50 dark:border-red-400/30 hover:border-red-300 dark:hover:border-red-400 text-red-600 dark:text-red-400 p-3 rounded-xl transition-all duration-300 hover:scale-110 shadow-lg"
                   aria-label="Scroll to top"
                 >
                   <ArrowUp className="h-5 w-5" />
