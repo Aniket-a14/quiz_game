@@ -13,6 +13,9 @@ export default function Contact() {
     message: "",
   })
 
+  // Formspree endpoint for aniketsahaworkspace@gmail.com (replace with your own if needed)
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mkgbwrga"
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -20,18 +23,20 @@ export default function Contact() {
     })
   }
 
+  // No need for handleSubmit if using Formspree, but you can use it for custom validation or feedback
+  // Here, we'll just reset the form after submission
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    setFormData({ name: "", email: "", message: "" })
-    alert("Thank you for your message! We'll get back to you soon.")
+    // Let the browser handle the POST to Formspree
+    setTimeout(() => {
+      setFormData({ name: "", email: "", message: "" })
+    }, 1000)
   }
 
   const contactInfo = [
     {
       icon: Mail,
       title: "Email",
-      value: "support@quizmaster.com",
+      value: "aniketsahaworkspace@gmail.com",
       description: "Send us an email anytime",
     },
     {
@@ -140,7 +145,12 @@ export default function Contact() {
             style={{ animation: "fadeInUp 0.6s ease-out 0.3s both" }}
           >
             <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-8">Send us a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              action={FORMSPREE_ENDPOINT}
+              method="POST"
+              className="space-y-6"
+              onSubmit={handleSubmit}
+            >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-3">
                   Full Name *
