@@ -62,7 +62,7 @@ export default function Level1() {
         <div className="mb-6 text-lg font-semibold text-gray-800 dark:text-gray-100">
           Q{current + 1}: {q.question}
         </div>
-        <div className="space-y-4 mb-6">
+        <div className="space-y-4 mb-6 dark:text-black">
           {q.options.map((option, idx) => (
             <button
               key={idx}

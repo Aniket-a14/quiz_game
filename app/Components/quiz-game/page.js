@@ -6,41 +6,42 @@ import { Trophy, Star, Zap, Award } from "lucide-react"
 
 const baseLevels = [
   {
-    title: "Level 1: Beginner",
-    description: "Start your journey! Simple questions about basic values and safety.",
+    title: "Level 1: Safety Scout",
+    description: "Learn the basics of personal safety, good touch and bad touch, and who to trust.",
     color: "from-green-400 to-green-600",
     icon: Star,
     href: "/Components/quiz-game/level1",
   },
   {
-    title: "Level 2: Explorer",
-    description: "A bit tougher! Explore real-life scenarios and make smart choices.",
+    title: "Level 2: Awareness Adventurer",
+    description: "Identify unsafe situations, understand emotions, and practice saying 'No' when needed.",
     color: "from-blue-400 to-blue-600",
     icon: Zap,
     href: "/Components/quiz-game/level2",
   },
   {
-    title: "Level 3: Challenger",
-    description: "Challenge yourself! Complex questions about honesty, kindness, and awareness.",
+    title: "Level 3: Trustworthy Trailblazer",
+    description: "Dive deeper into topics like online safety, bullying, and making safe decisions.",
     color: "from-yellow-400 to-orange-500",
     icon: Trophy,
     href: "/Components/quiz-game/level3",
   },
   {
-    title: "Level 4: Master",
-    description: "Master level! Only for the bravest and wisest quiz champions.",
+    title: "Level 4: Courageous Champion",
+    description: "Answer challenging scenarios requiring courage, honesty, and emotional strength.",
     color: "from-red-500 to-red-700",
     icon: Award,
     href: "/Components/quiz-game/level4",
   },
   {
-    title: "Level 5: Quiz",
-    description: "Master level! Only for the bravest and wisest quiz champions.",
-    color: "from-red-500 to-red-700",
+    title: "Level 5: Safety Superhero",
+    description: "Final test! Apply everything you’ve learned to become a real-life safety superhero.",
+    color: "from-purple-500 to-purple-700",
     icon: Award,
-    href: "/Components/quiz-game/level4",
+    href: "/Components/quiz-game/level5",
   },
-]
+];
+
 
 export default function QuizGameLevels() {
   const [unlocked, setUnlocked] = useState(1)
