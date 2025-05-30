@@ -149,7 +149,7 @@ export default function Hero() {
             <div className="relative z-10">
               <div className="relative overflow-hidden rounded-3xl">
                 <Image
-                  src="/placeholder.svg?height=600&width=700"
+                  src="/logo.png"
                   alt="Quiz Game Illustration"
                   width={700}
                   height={600}
