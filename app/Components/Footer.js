@@ -71,7 +71,7 @@ export default function Footer() {
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-md leading-relaxed">
                 Making understanding and learning safe for kids worldwide. Join thousands of families who trust
-                PAQuiz for their children's safety journey!
+                PAQuiz for their children&apos;s safety journey!
               </p>
 
               {/* Social Links */}

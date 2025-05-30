@@ -69,12 +69,12 @@ export default function Contact() {
 
           <h2 className="text-4xl md:text-6xl font-bold mb-8">
             <span className="bg-gradient-to-r from-gray-800 dark:from-gray-100 to-gray-600 dark:to-gray-300 bg-clip-text text-transparent">
-              Let's
+              Let&apos;s
             </span>
             <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent"> Connect</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Have questions about PAQuiz? Want to share feedback? We'd love to hear from parents and kids! Our team
+            Have questions about PAQuiz? Want to share feedback? We&apos;d love to hear from parents and kids! Our team
             is here to help make learning fun and safe.
           </p>
         </div>
@@ -118,7 +118,7 @@ export default function Contact() {
               <Shield className="h-8 w-8 text-red-600 dark:text-red-400 mb-4" />
               <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">Safe & Secure Support</h4>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Our support team is trained in child safety and privacy. We're committed to providing a secure
+                Our support team is trained in child safety and privacy. We&apos;re committed to providing a secure
                 environment for kids to learn and grow while giving parents peace of mind.
               </p>
               <div className="flex flex-wrap gap-3">
