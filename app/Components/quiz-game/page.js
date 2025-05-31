@@ -1,8 +1,9 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { Trophy, Star, Zap, Award } from "lucide-react"
+import BounceLoader from "@/components/mvpblocks/bouncing-loader"
 
 const baseLevels = [
   {
@@ -44,22 +45,32 @@ const baseLevels = [
 
 export default function QuizGameLevels() {
   const [unlocked, setUnlocked] = useState(1)
+  const [loading, setLoading] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
-    // Check localStorage for progress
     const progress = parseInt(localStorage.getItem("quiz-progress") || "1", 10)
     setUnlocked(progress)
   }, [])
 
-  // Helper to determine if a level is disabled
   const getLevels = () =>
     baseLevels.map((level, idx) => ({
       ...level,
       disabled: idx + 1 > unlocked,
     }))
 
+  const handleLevelClick = (href) => {
+    setLoading(true)
+    router.push(href)
+  }
+
   return (
     <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-rose-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-24 px-2 sm:px-4">
+      {loading && (
+        <div className="fixed inset-0 flex items-center justify-center bg-white/60 dark:bg-black/60 z-50">
+          <BounceLoader />
+        </div>
+      )}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
           Choose Your Quiz Level
@@ -69,15 +80,14 @@ export default function QuizGameLevels() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-4xl">
-        {getLevels().map((level, idx) => {
+        {getLevels().map((level) => {
           const Icon = level.icon
           return (
             <div
               key={level.title}
               className={`relative group rounded-3xl p-8 shadow-xl border border-red-200/50 dark:border-red-400/30 bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl
                 bg-gradient-to-r ${level.color} ${level.disabled ? "opacity-60 cursor-not-allowed" : "hover:opacity-100"}
-                w-full min-w-0
-                max-w-xs mx-auto md:max-w-full md:mx-0
+                w-full min-w-0 max-w-xs mx-auto md:max-w-full md:mx-0
               `}
             >
               <div className="flex items-center mb-4">
@@ -95,13 +105,12 @@ export default function QuizGameLevels() {
                   Locked
                 </button>
               ) : (
-                <Link href={level.href}>
-                  <button
-                    className="px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-red-500 to-red-700 shadow-lg transition-all duration-300 hover:from-red-400 hover:to-red-600 hover:scale-105 w-full"
-                  >
-                    Start Level
-                  </button>
-                </Link>
+                <button
+                  onClick={() => handleLevelClick(level.href)}
+                  className="px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-red-500 to-red-700 shadow-lg transition-all duration-300 hover:from-red-400 hover:to-red-600 hover:scale-105 w-full"
+                >
+                  Start Level
+                </button>
               )}
               {level.disabled && (
                 <div className="absolute top-4 right-4 text-xs bg-red-100 text-red-600 px-3 py-1 rounded-full font-semibold shadow">
